@@ -1,0 +1,93 @@
+#container{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logo{
+  display: inline;
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin: 0px;
+}
+
+.banner-desktop{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;/*dd an effect in a property of one element and the duration*/
+  background-image: url("../images/banner/banner1.jpg");/*images location*/
+  animation: banner-desktop 30s infinite;
+  margin-left: -1px;
+}
+/*Add animation to the banner, divide 100% in three images*/
+@keyframes banner-desktop{
+	0%{
+		background-image: url('../images/banner/banner1.jpg');
+	}
+	25%{
+		background-image: url('../images/banner/banner1.jpg');
+	}
+	34%{
+		background-image: url('../images/banner/banner2.jpg');
+	}
+	66%{
+		background-image: url('../images/banner/banner2.jpg');
+	}
+	67%{
+		background-image: url('../images/banner/banner3.jpg');
+	}
+	100%{
+		background-image: url('../images/banner/banner3.jpg');
+	}
+
+}
+
+/*Menu styles*/
+.menu{
+  font-weight: bold;
+	text-align: center;
+  background-color: #112C3D;
+  height: 60px;
+}
+
+.menu li{
+  display: inline-block;
+  padding: 20px 10px 5px 10px;
+}
+
+.menu a{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/*destines*/
+.explore{
+  text-align: center;
+}
+
+h1{
+  font-family: "Brush Script MT", cursive;
+  font-size: 52px;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: -2.5em;
+}
+
+.destiny{
+  width: 20%;
+  height: 350px;
+  background-color: #112C3D;
+  margin: 10px 2.5% 0px 2.5%;
+  float: left;
+}
