@@ -3,91 +3,238 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.logo{
-  display: inline;
-  width: 60px;
-  height: 60px;
-  float: left;
-  margin: 0px;
-}
-
-.banner-desktop{
-  position: relative;
-  width: 100%;
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  transition: all .1s ease-in-out;/*dd an effect in a property of one element and the duration*/
-  background-image: url("../images/banner/banner1.jpg");/*images location*/
-  animation: banner-desktop 30s infinite;
-  margin-left: -1px;
-}
-/*Add animation to the banner, divide 100% in three images*/
-@keyframes banner-desktop{
-	0%{
-		background-image: url('../images/banner/banner1.jpg');
-	}
-	25%{
-		background-image: url('../images/banner/banner1.jpg');
-	}
-	34%{
-		background-image: url('../images/banner/banner2.jpg');
-	}
-	66%{
-		background-image: url('../images/banner/banner2.jpg');
-	}
-	67%{
-		background-image: url('../images/banner/banner3.jpg');
-	}
-	100%{
-		background-image: url('../images/banner/banner3.jpg');
-	}
-
-}
-
-/*Menu styles*/
-.menu{
-  font-weight: bold;
+/*Upper bar that has sing in button*/
+#sign-in{
+	background-color: #FABB25;
 	text-align: center;
-  background-color: #112C3D;
-  height: 60px;
+	right: 15px;
+	position: absolute;
+	border-radius: 60px;
+	padding: 5px 10px 5px 10px;
+	color: #FFFF;
+	width: 60px;
+	margin-top: 25px;
 }
 
-.menu li{
-  display: inline-block;
-  padding: 20px 10px 5px 10px;
+h1{
+	font-family: "Brush Script MT", cursive;
+	font-size: 42px;
+	text-align: center;
+	margin: 0;
 }
 
-.menu a{
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
+h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+h3{
+	font-size: 16px;
+	font-weight: normal;
 }
 
 /*destines*/
 .explore{
-  text-align: center;
+	text-align: center;
 }
 
-h1{
-  font-family: "Brush Script MT", cursive;
-  font-size: 52px;
+footer{
+	background-color: #112C3C;
+	left:0;
+	bottom: 0;
+	width: inherit;
+	float: left;
+	color: #FFFFFF;
+	padding: 10px 15px 5px 15px;
 }
 
-h2{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  margin-top: -2.5em;
+/*Media query for cellphone and small tablets */
+@media only screen and (max-width: 768px) {
+	.logo{
+		display: block;
+		text-align: center;
+	  width: 100px;
+	  height: 100px;
+	  margin: auto;
+	}
+	header{
+		height: 100px;
+	}
+	header h1{
+		visibility: hidden;
+	}
+
+	/*Menu styles*/
+	.menu{
+	  font-weight: bold;
+		text-align: center;
+	  background-color: #112C3C;
+	  height: auto;
+		width: inherit;
+		margin: 0;
+	}
+	.menu ul{
+		padding: 0;
+	}
+
+	.menu li{
+	  padding: 20px 10px 20px 10px;
+		list-style-type: none;
+	}
+
+	.menu a, footer a{
+	    color: #FFFFFF;
+	    text-align: center;
+	    font-size: 14px;
+	    font-family: Arial, Helvetica, sans-serif;
+	    text-decoration: none;
+	}
+
+	.menu li:hover{
+		background-color: #FABB25;
+		padding: 20px 10px 20px 10px;
+	}
+
+	.destiny{
+	  width: 50%;
+	  height: 350px;
+	  background-color: #112C3C;
+	  margin: 5px 25% 5px 25%;
+		float: left;
+		color: #FFFFFF;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align:center;
+		display: inline-block;
+	}
+
+	.destiny img{
+		width: 80%;
+		margin:15px 10% 15px 10%;
+	}
+	.destiny p{
+		padding: 5px 15px 5px 15px;
+	}
+
+	#destiny2, #destiny3, #destiny4{
+		display: none;
+	}
 }
 
-.destiny{
-  width: 20%;
-  height: 350px;
-  background-color: #112C3D;
-  margin: 10px 2.5% 0px 2.5%;
-  float: left;
+/*Media query for Tablet */
+@media only screen and (min-width: 769px) {
+	.logo{
+		display: block;
+		text-align: center;
+	  width: 100px;
+	  height: 100px;
+	  margin: auto;
+	}
+	header{
+		height: 100px;
+	}
+	header h1{
+		visibility: hidden;
+	}
+
+	/*Menu styles*/
+	.menu{
+	  font-weight: bold;
+		text-align: center;
+	  background-color: #112C3C;
+	  height: 60px;
+	}
+
+	.menu li{
+	  display: inline-block;
+	  padding: 20px 10px 5px 10px;
+	}
+
+	.menu a, footer a{
+	    color: #FFFFFF;
+	    text-align: center;
+	    font-size: 14px;
+	    font-family: Arial, Helvetica, sans-serif;
+	    text-decoration: none;
+	}
+
+	.menu li:hover{
+		background-color: #FABB25;
+		padding: 20px 10px 20px 10px;
+	}
+
+	.destiny{
+	  width: 20%;
+	  height: 350px;
+	  background-color: #112C3C;
+	  margin: 5px 2.5% 5px 2.5%;
+		float: left;
+		color: #FFFFFF;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align:center;
+		display: inline-block;
+	}
+
+	.destiny img{
+		width: 80%;
+		margin:15px 10% 15px 10%;
+	}
+	.destiny p{
+		padding: 5px 15px 5px 15px;
+	}
+}
+
+/*Media query for desktop */
+@media only screen and (min-width: 920px) {
+	.logo{
+	  display: inline;
+	  width: 80px;
+	  height: 80px;
+	  margin: 0em 0em 0em 0em;
+		position: absolute;
+	}
+	header{
+		height: 80px;
+	}
+
+	header h1{
+		display: flex;
+		justify-content: center;
+		padding: 2.5% 0 2.5% 0;
+		visibility: visible;
+	}
+
+
+	.banner-desktop{
+	  position: relative;
+	  width: 100%;
+	  height: 500px;
+	  background-size: cover;
+	  background-position: center;
+	  transition: all .1s ease-in-out;/*dd an effect in a property of one element and the duration*/
+	  background-image: url("../images/banner/banner1.jpg");/*images location*/
+	  animation: banner-desktop 30s infinite;
+	  margin: 0em 0em 4em 0em;
+	}
+	/*Add animation to the banner, divide 100% in three images*/
+	@keyframes banner-desktop{
+		0%{
+			background-image: url('../images/banner/banner1.jpg');
+		}
+		25%{
+			background-image: url('../images/banner/banner1.jpg');
+		}
+		34%{
+			background-image: url('../images/banner/banner2.jpg');
+		}
+		66%{
+			background-image: url('../images/banner/banner2.jpg');
+		}
+		67%{
+			background-image: url('../images/banner/banner3.jpg');
+		}
+		100%{
+			background-image: url('../images/banner/banner3.jpg');
+		}
+	}
 }
