@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Flash Travels Agency</title>
+    <title>Flash Travels Agency - Contact Us</title>
     <link rel="stylesheet" href="css/master.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -11,7 +11,6 @@
       <a href="sign-in.html">
         <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
       </a>
-
       <!--logo-->
       <header>
         <a href="index.html"><img class="logo" src="images/logo.png" alt="Flash Traves logo"></a>
@@ -36,37 +35,38 @@
         </div>
       </div>
       <div class="explore">
-        <h1>Explore</h1>
-        <h2>FROM WIDE RANGE OF OPTIONS</h2>
+        <h1>Contact Us</h1>
+        <h2>LET US HELP YOU PERSONALLY</h2>
       </div>
-      <a href="destiny1.html" id="destiny1">
-        <div class="destiny">
-          <img src="images/destinies/destiny1.jpg" alt=""></img>
-          <h3>Toronto</h3>
-          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-        </div>
-      </a>
-      <a href="destiny2.html" id="destiny2">
-        <div class="destiny">
-          <img src="images/destinies/destiny2.jpg" alt=""></img>
-          <h3>Dubai</h3>
-          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-        </div>
-      </a>
-      <a href="destiny3.html" id="destiny3">
-        <div class="destiny">
-          <img src="images/destinies/destiny3.jpg" alt=""></img>
-          <h3>Sidney</h3>
-          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-        </div>
-      </a>
-      <a href="destiny4.html" id="destiny4">
-        <div class="destiny">
-          <img src="images/destinies/destiny4.jpg" alt=""></img>
-          <h3>Santorini</h3>
-          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-        </div>
-      </a>
+      <div class="contact">
+        <form class="" action="index.html" method="post">
+          <table>
+            <tr>
+              <td class="label"><label for="name">Your Name </label></td>
+              <td><input type="text" name="name" required value=""></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="phone">Phone </label></td>
+              <td><input type="tel" name="phone" placeholder="555-55-555" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value=""></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="name">Email </label></td>
+              <td><input type="text" name="email" required value=""></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="subject">Subject </label></td>
+              <td><textarea name="subject" rows="6" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <a href="sign-in.html">
+                  <input type="submit" name="send" value="Send" class="button" width="50px" id="send">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
       <footer>
         <div class="social_images">
           <a href="https://www.facebook.com"><img src="images/social/Facebook.png" alt=""></a>
