@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="css/master.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+  <script type="text/javascript">
+      var url = window.location.search;//Parameters in the url
+      if (url !=''){
+        alert('Thank you to contact us. Your request was sent!'); //show a message to the user
+      }
+  </script>
   <body>
     <div id="container">
       <a href="sign-in.html">
@@ -13,7 +19,7 @@
       </a>
       <!--logo-->
       <header>
-        <a href="index.html"><img class="logo" src="images/logo.png" alt="Flash Traves logo"></a>
+        <a href="contact.html"><img class="logo" src="images/logo.png" alt="Flash Traves logo"></a>
         <h1>Flash Travels</h1>
     	</header>
 
@@ -27,19 +33,12 @@
     			<li><a href="contact.html">Contact Us</a></li>
     		</ul>
     	</nav>
-
-      <!--Class desktop, elements just for desktop site-->
-      <div class="desktop">
-        <!-- Home Page Banner -->
-      	<div class="banner-desktop">
-        </div>
-      </div>
       <div class="explore">
         <h1>Contact Us</h1>
         <h2>LET US HELP YOU PERSONALLY</h2>
       </div>
-      <div class="contact">
-        <form class="" action="index.html" method="post">
+      <div class="dark-form" id="contact-form">
+        <form class="" action="contact.html" method="get">
           <table>
             <tr>
               <td class="label"><label for="name">Your Name </label></td>
@@ -47,7 +46,7 @@
             </tr>
             <tr>
               <td class="label"><label for="phone">Phone </label></td>
-              <td><input type="tel" name="phone" placeholder="555-55-555" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value=""></td>
+              <td><input type="tel" name="phone" placeholder="123456789" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value=""></td>
             </tr>
             <tr>
               <td class="label"><label for="name">Email </label></td>

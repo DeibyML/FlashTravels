@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flash Travels Agency - Check in</title>
+    <link rel="stylesheet" href="css/master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <script type="text/javascript">
+      var url = window.location.search;//Parameters in the url
+      if (url !=''){
+        alert('Thank you to contact us. Your request was sent!'); //show a message to the user
+      }
+  </script>
+  <body>
+    <div id="container">
+      <a href="sign-in.html">
+        <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
+      </a>
+      <!--logo-->
+      <header>
+        <a href="checking.html"><img class="logo" src="images/logo.png" alt="Flash Traves logo"></a>
+        <h1>Flash Travels</h1>
+    	</header>
+
+      <!--Menu-->
+      <nav class="menu">
+    		<ul>
+    			<li><a href="index.html">Home</a></li>
+    			<li><a href="booking.html">Booking</a></li>
+          <li><a href="checking.html">Chek-In</a></li>
+    			<li><a href="about-us.html">About</a></li>
+    			<li><a href="contact.html">Contact Us</a></li>
+    		</ul>
+    	</nav>
+      <div class="explore">
+        <h1>Do your Check - in here...</h1>
+      </div>
+      <div class="desktop">
+        <div class="ligth-form" id="checkingform">
+          <form action="checking.html" method="get">
+            <table>
+              <tr>
+                <td class="label"><label for="reservation">Reservation Number</label></td>
+                <td><input type="text" name="reservation" id="reservation" required value=""></td>
+                <td class="label"><label for="passenger">Passenger </label></td>
+                <td><input type="text" name="passenger" id="passenger" required value=""></td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <a href="sign-in.html">
+                    <input type="submit" name="search" value="Search" class="button" id="search">
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div class="ligth-form" id="checking-result">
+          <table style="border: 1px #D7D2D0 solid; border-spacing:0;">
+            <tr>
+              <th colspan="3" style="border: 1px #D7D2D0 solid;">PASSENGER: JESSICA ALVAREZ</th>
+            </tr>
+            <tr>
+              <td style="border: 1px #D7D2D0 solid collapse;">
+                <h2>TORONTO</h2><br>
+                Toronto International Airport <br>
+                06:00 p.m
+              </td>
+              <td style="border: 1px #D7D2D0 solid collapse;">
+                Duration: 05h 06m
+              </td>
+              <td style="border: 1px #D7D2D0 solid collapse;">
+                <h2>VANCOUVER</h2><br>
+                Vancouver International Airport <br>
+                11:06 p.m
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="tablet">
+        <div class="ligth-form" id="checking-form">
+          <form action="checking.html" method="get">
+            <table>
+              <tr>
+                <td class="label"><label for="reservation">Reservation Number</label></td>
+                <td><input type="text" name="reservation" id="reservation" required value=""></td>
+              </tr>
+              <tr>
+                <td class="label"><label for="passenger">Passenger </label></td>
+                <td><input type="text" name="passenger" id="passenger" required value=""></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <a href="sign-in.html">
+                    <input type="submit" name="search" value="Search" class="button" id="search">
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="social_images">
+          <a href="https://www.facebook.com"><img src="images/social/Facebook.png" alt=""></a>
+          <a href="https://www.instagram.com"><img src="images/social/Instagram.png" alt=""></a>
+          <a href="https://www.twitter.com"><img src="images/social/Twitter.png" alt=""></a>
+          <a href="mailto:info@flashtravels.com"><img src="images/social/info.png" alt=""></a>
+        </div>
+
+        <h3>&copy; Copyright 2021. All Rights Reserved.</h3>
+      </footer>
+    </div>
+  </body>
+</html>

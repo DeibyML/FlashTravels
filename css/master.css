@@ -10,9 +10,14 @@
 	text-align: center;
 	border-radius: 60px;
 	padding: 5px 10px 5px 10px;
+	margin-top: 5px;
 	color: #FFFF;
 	border-width: 0;
 	font-weight: bold;
+}
+
+.button:hover{
+	cursor: pointer;
 }
 
 /*Upper bar that has sing in button*/
@@ -21,8 +26,6 @@
 	margin-top: 25px;
 	right: 15px;
 }
-
-
 
 h1{
 	font-family: "Brush Script MT", cursive;
@@ -73,6 +76,18 @@ footer{
 	width: 80px;
 }
 
+#search{
+	width: 80px;
+}
+
+#checking-result{
+	padding: 30px;
+	margin: 10px 30% 10px 30%;
+	text-align:center;
+	float: left;
+	display: inline-block;
+}
+
 /*Media query for cellphone and small tablets */
 @media only screen and (max-width: 768px) {
 	.logo{
@@ -82,6 +97,11 @@ footer{
 	  height: 100px;
 	  margin: auto;
 	}
+
+	.desktop{
+		display: none;
+	}
+
 	header{
 		height: 100px;
 	}
@@ -143,11 +163,8 @@ footer{
 	}
 
 	/*Contact Page*/
-	.contact{
-		width: 80%;
-		height: 370px;
+	.dark-form{
 		background-color: #112C3C;
-		margin: 5px 10% 20px 10%;
 		float: left;
 		color: #FFFFFF;
 		font-size: 16px;
@@ -155,22 +172,61 @@ footer{
 		display: inline-block;
 	}
 
-	.contact table{
+	.dark-form table{
 		padding-top: 20px;
 		width: 100%;
 	}
 
-	.contact td{
+	.dark-form td{
 		padding: 8px 0 8px 0;
 	}
 
-	.contact input{
+	.dark-form input[type=text]{
 		width: 70%;
 		height: 30px;
 	}
-	.contact textarea{
+	.dark-form textarea{
 		width: 70%;
 	}
+
+	.ligth-form{
+		background-color: #FFFFFF;
+		float: left;
+		color: #000000;
+		font-size: 16px;
+		text-align:center;
+		display: inline-block;
+	}
+
+	.ligth-form table{
+		padding-top: 20px;
+		width: 100%;
+	}
+
+	.ligth-form td{
+		padding: 8px 10px 80px 10px;
+	}
+
+	.ligth-form input[type=text]{
+		width: 70%;
+		height: 30px;
+		background-color: #D7D2D0;
+		border: 0px;
+	}
+
+	#contact-form{
+		width: 80%;
+		height: 370px;
+		margin: 5px 10% 20px 10%;
+	}
+
+	#checking-form{
+		width: 80%;
+		height: 200px;
+		margin: 5px 10% 20px 10%;
+	}
+
+
 
 	.label{
 		text-align: right;
@@ -179,6 +235,10 @@ footer{
 
 /*Media query for Tablet */
 @media only screen and (min-width: 769px) {
+	.tablet{
+		display: none;
+	}
+
 	.logo{
 		display: block;
 		text-align: center;
@@ -239,11 +299,8 @@ footer{
 	}
 
 	/*Contact Page*/
-	.contact{
-		width: 48%;
-		height: 370px;
+	.dark-form{
 		background-color: #112C3C;
-		margin: 5px 26% 20px 26%;
 		float: left;
 		color: #FFFFFF;
 		font-size: 16px;
@@ -251,18 +308,55 @@ footer{
 		display: inline-block;
 	}
 
-	.contact table{
+	.dark-form table{
 		padding-top: 20px;
 		width: 100%;
 	}
 
-	.contact td{
+	.dark-form td{
 		padding: 8px 0 8px 0;
 	}
 
-	.contact input{
+	.dark-form input{
 		width: 250px;
 		height: 30px;
+	}
+
+	.ligth-form{
+		background-color: #FFFFFF;
+		float: left;
+		color: #000000;
+		font-size: 16px;
+		text-align:center;
+		display: inline-block;
+	}
+
+	.ligth-form table{
+		padding-top: 20px;
+		width: 100%;
+	}
+
+	.ligth-form td{
+		padding: 8px 0 8px 0;
+	}
+
+	.ligth-form input[type=text]{
+		width: 250px;
+		height: 30px;
+		background-color: #D7D2D0;
+		border: 0px;
+	}
+
+	#contact-form{
+		width: 48%;
+		height: 370px;
+		margin: 5px 26% 20px 26%;
+	}
+
+	#checking-form{
+		width: 90%;
+		height: 150px;
+		margin: 5px 5% 20px 5%;
 	}
 
 	.label{
