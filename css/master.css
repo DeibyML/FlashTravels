@@ -86,7 +86,7 @@ footer {
 }
 
 #search {
-  width: 80px;
+  width: 100px;
 }
 
 #checking-result {
@@ -233,6 +233,8 @@ footer {
     height: 30px;
     background-color: #d7d2d0;
     border: 0px;
+    border-radius: 7px;
+    margin-inline: 10px;
   }
 
   #contact-form {
@@ -394,6 +396,8 @@ footer {
     height: 30px;
     background-color: #d7d2d0;
     border: 0px;
+    border-radius: 7px;
+    margin-inline: 10px;
   }
 
   #contact-form {
@@ -497,6 +501,10 @@ footer {
       background-image: url("../images/banner/banner3.jpg");
     }
   }
+}
+
+body {
+  min-height: 60rem;
 }
 
 .div-about {
