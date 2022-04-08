@@ -183,11 +183,9 @@ footer {
   /*Contact Page*/
   .dark-form {
     background-color: #112c3c;
-    float: left;
     color: #ffffff;
     font-size: 16px;
-    text-align: center;
-    display: inline-block;
+    width: auto;
   }
 
   .dark-form table {
@@ -238,9 +236,12 @@ footer {
   }
 
   #contact-form {
-    width: 80%;
-    height: 370px;
-    margin: 5px 10% 20px 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  #contact-form td{
+    text-align: left;
   }
 
   #checking-form #checking-form-tablet{
@@ -350,11 +351,9 @@ footer {
   /*Contact Page*/
   .dark-form {
     background-color: #112c3c;
-    float: left;
     color: #ffffff;
     font-size: 16px;
-    text-align: center;
-    display: inline-block;
+    width: auto;
   }
 
   .dark-form table {
@@ -363,7 +362,8 @@ footer {
   }
 
   .dark-form td {
-    padding: 8px 0 8px 0;
+    padding: 8px 10px 8px 10px;
+    margin: 10px
   }
 
   .dark-form input {
@@ -401,9 +401,10 @@ footer {
   }
 
   #contact-form {
-    width: 48%;
-    height: 370px;
-    margin: 5px 26% 20px 26%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   #checking-form #checking-form-tablet{

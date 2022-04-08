@@ -4,9 +4,40 @@
     <meta charset="utf-8">
     <title>Flash Travels Agency - Contact Us</title>
     <link rel="stylesheet" href="css/master.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery.validate.min.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <script type="text/javascript">
+      //Validate form using jQuery
+      $(document).ready(function() {
+        $("form").validate({
+          rules:{
+            name:'required',
+            phone:{
+              required: true,
+              digits: true, //Only accepts numbers
+              minlength: 10,
+              maxlength: 10
+            },
+            email:{
+              required:true,
+              email:true
+            },
+            subject:{
+              required: true,
+              minlength: 25
+            }
+          },
+          messages:{
+            name: " *Name is required.",
+            phone: " *Phone is required with 10 digits",
+            email: " *Email is required in email format",
+            subject: " *Subject must be at least 25 chars"
+          }
+        });
+      });
+
       var url = window.location.search;//Parameters in the url
       if (url !=''){
         alert("Thank you for contacting us. Your request was sent successfully!"); //show a message to the user
@@ -40,35 +71,38 @@
         <h1>Contact Us</h1>
         <h2>LET US HELP YOU PERSONALLY</h2>
       </div>
-      <div class="dark-form" id="contact-form">
-        <form class="" action="contact.html" method="get">
-          <table>
-            <tr>
-              <td class="label"><label for="name">Your Name </label></td>
-              <td><input style="border-radius:7px" placeholder="Please, enter your Name" type="text" name="name" required value=""></td>
-            </tr>
-            <tr>
-              <td class="label"><label for="phone">Phone </label></td>
-              <td><input style="border-radius:7px" placeholder="Please, enter your Phone (123456789)" type="tel" name="phone" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value=""></td>
-            </tr>
-            <tr>
-              <td class="label"><label for="name">Email </label></td>
-              <td><input style="border-radius:7px" placeholder="Please, enter your Email" type="text" name="email" required value=""></td>
-            </tr>
-            <tr>
-              <td class="label"><label for="subject">Subject </label></td>
-              <td><textarea style="border-radius:7px" placeholder="Please, enter your Subject" name="subject" rows="6" cols="30" required></textarea></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <a href="sign-in.html">
-                  <input type="submit" name="send" value="Send" class="button" width="50px" id="send">
-                </a>
-              </td>
-            </tr>
-          </table>
-        </form>
+      <div id="contact-form">
+        <div class="dark-form">
+          <form class="" action="contact.html" method="get">
+            <table>
+              <tr>
+                <td class="label"><label for="name">Your Name </label></td>
+                <td><input style="border-radius:7px" placeholder="Please, enter your Name" type="text" name="name" value=""></td>
+              </tr>
+              <tr>
+                <td class="label"><label for="phone">Phone </label></td>
+                <td><input style="border-radius:7px" placeholder="Please, enter your Phone (123456789)" type="tel" name="phone" value=""> </td>
+              </tr>
+              <tr>
+                <td class="label"><label for="name">Email </label></td>
+                <td><input style="border-radius:7px" placeholder="Please, enter your Email" type="text" name="email" value=""> </td>
+              </tr>
+              <tr>
+                <td class="label"><label for="subject">Subject </label></td>
+                <td><textarea style="border-radius:7px" placeholder="Please, enter your Subject" name="subject" rows="6" cols="30"></textarea></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align:center">
+                  <a href="sign-in.html">
+                    <input type="submit" name="send" value="Send" class="button" width="50px" id="send">
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
       </div>
+
       <footer>
         <div class="social_images">
           <a href="https://www.facebook.com"><img src="images/social/Facebook.png" alt=""></a>
