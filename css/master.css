@@ -362,7 +362,6 @@ footer {
   /*Contact Page*/
   .dark-form {
     background-color: #112c3c;
-    float: left;
     color: #ffffff;
     font-size: 16px;
     text-align: center;
@@ -415,6 +414,11 @@ footer {
   #contact-form {
     width: 48%;
     height: 370px;
+    margin: 5px 26% 20px 26%;
+  }
+  #register-div-form {
+    width: 48%;
+    height: 610px;
     margin: 5px 26% 20px 26%;
   }
 
