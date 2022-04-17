@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="Javascript/validator.js"></script>
     <meta charset="utf-8" />
-    <title>Flash Travels Agency - Contact Us</title>
+    <title>Flash Travels Agency - Register</title>
     <link rel="stylesheet" href="css/master.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <script type="text/javascript">
-    var url = window.location.search; //Parameters in the url
-    if (url != "") {
-      alert("Thank you to contact us. Your request was sent!"); //show a message to the user
-    }
-  </script>
   <body>
     <div id="container">
       <!--logo-->
@@ -35,29 +32,37 @@
       <div class="explore">
         <h1>Register</h1>
       </div>
-      <div class="dark-form" id="contact-form">
-        <form class="" action="contact.html" method="get">
+      <div class="dark-form" id="register-div-form">
+        <form id="register-form" method="get">
           <table>
             <tr>
               <td class="label"><label for="name">FullName</label></td>
-              <td><input type="text" name="name" required value="" /></td>
+              <td>
+                <input type="text" name="name" id="name" required value="" />
+              </td>
             </tr>
             <tr>
               <td class="label"><label for="phone">Cellphone </label></td>
               <td>
-                <input type="number" required value="" />
+                <input type="tel" id="phone" name="phone" required value="" />
               </td>
             </tr>
             <tr>
               <td class="label"><label for="Email">Email </label></td>
               <td>
-                <input type="email" required value="" />
+                <input type="email" id="email" name="email" required value="" />
               </td>
             </tr>
             <tr>
               <td class="label"><label for="password">Password </label></td>
               <td>
-                <input type="password" required value="" />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  value=""
+                />
               </td>
             </tr>
             <tr>
@@ -65,26 +70,37 @@
                 <label for="password">Confirm Password </label>
               </td>
               <td>
-                <input type="password" required value="" />
+                <input
+                  type="password"
+                  id="Confirm_password"
+                  name="Confirm_password"
+                  required
+                  value=""
+                />
               </td>
             </tr>
           </table>
-          <a href="sign-in.html">
-            <input
-              type="submit"
-              name="Register"
-              value="Register"
-              class="button"
-            />
-          </a>
-          <a href="covid19.html">
-            <input type="submit" name="covid" value="Covid 19 policies" class="button" style="margin-top: 25px; right: 15px;">
-          </a>
-          <p>
-            Are you already registered? Press click to
-            <a href="sign-in.html" class="link-click">Sign in</a>
-          </p>
+          <input
+            type="submit"
+            type="url"
+            name="Register"
+            value="Register"
+            class="button"
+            id="register_button"
+          />
         </form>
+        <input
+          type="button"
+          name="covid"
+          id="covid_button"
+          value="Covid 19 policies"
+          class="button"
+          style="margin-top: 25px; right: 15px"
+        />
+        <p>
+          Are you already registered? Press click to
+          <a href="sign-in.html" class="link-click">Sign in</a>
+        </p>
       </div>
 
       <footer>
