@@ -1,4 +1,20 @@
 $(document).ready(function () {
+  $("#covid_button").click(function () {
+    window.location = "./covid19.html";
+  });
+  $.validator.addMethod(
+    "validpassword",
+    function (value, element) {
+      return (
+        this.optional(element) ||
+        /^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[\W_]).*$/.test(value)
+      );
+    },
+    "The password must contain a minimum of one lower case character," +
+      " one upper case character, one digit, one special character and must" +
+      "to contain at least 8 characters. "
+  );
+
   $("#register-form").validate({
     rules: {
       name: {
@@ -8,23 +24,21 @@ $(document).ready(function () {
       phone: {
         required: true,
         number: true,
-        min: 10,
-        max: 10,
+        minlength: 10,
+        maxlength: 10,
       },
       email: {
         required: true,
         email: true,
       },
       password: {
-        required: {
-          depends: function (elem) {
-            let passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z].(8,16))$/;
-            return $("#password").val() == passw;
-          },
-        },
+        required: true,
+        validpassword: true,
+        minlength: 8,
       },
       Confirm_password: {
         required: true,
+        equalTo: "[name='password']",
       },
     },
     messages: {
@@ -34,20 +48,14 @@ $(document).ready(function () {
       phone: {
         required: "Please enter your phone number",
         number: "Please enter your phone number as a numerical value",
-        min: "Your phone number must containt 10 numbers",
-        max: "Your phone number must containt 10 numbers",
+        minlength: "Your phone number must containt 10 numbers",
       },
       email: {
         email: "The email should be in the format: abc@domain.com",
         required: "Please enter your email.",
       },
-      password: {
-        required:
-          "The password must contain at least One numeric digit, one Uppercase and one lowercase letter ",
-        min: " The password must have at least 8 character",
-      },
       Confirm_password: {
-        required: "Please Enter the same password",
+        required: "Password does not match",
       },
     },
   });

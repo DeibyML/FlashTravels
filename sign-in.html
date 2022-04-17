@@ -2,16 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Flash Travels Agency - Contact Us</title>
+    <title>Flash Travels Agency - Sign in</title>
     <link rel="stylesheet" href="css/master.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <script type="text/javascript">
-    var url = window.location.search; //Parameters in the url
-    if (url != "") {
-      alert("Thank you for contacting us. Your request was sent successfully!"); //show a message to the user
-    }
-  </script>
   <body>
     <div id="container">
       <!--logo-->
@@ -35,29 +29,28 @@
       <div class="explore">
         <h1>Sign in</h1>
       </div>
-      <div  id="contact-form">
-        <div class="dark-form">
-          <form class="" action="contact.html" method="get">
-            <table>
-              <tr>
-                <td class="label"><label for="Email"> Email</label></td>
-                <td><input type="text" name="email" required value="" /></td>
-              </tr>
-              <tr>
-                <td class="label"><label for="password">password </label></td>
-                <td>
-                  <input type="password" required value="" />
-                </td>
-              </tr>
-            </table>
-            <p style="text-align:center">Are you not registered yet?</p>
-            <p style="text-align:center">
-              Press click to
-              <a href="register.html" class="link-click">register</a>
-            </p>
-          </form>
-        </div>
+      <div class="dark-form" id="contact-form">
+        <form class="" action="contact.html" method="get">
+          <table>
+            <tr>
+              <td class="label"><label for="Email"> Email</label></td>
+              <td><input type="text" name="email" required value="" /></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="password">password </label></td>
+              <td>
+                <input type="password" required value="" />
+              </td>
+            </tr>
+          </table>
+          <p>Are you not registered yet?</p>
+          <p>
+            Press click to
+            <a href="register.html" class="link-click">register</a>
+          </p>
+        </form>
       </div>
+
       <footer>
         <div class="social_images">
           <a href="https://www.facebook.com"
