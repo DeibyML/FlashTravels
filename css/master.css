@@ -351,6 +351,7 @@ footer {
   /*Contact Page*/
   .dark-form {
     background-color: #112c3c;
+    float: left;
     color: #ffffff;
     font-size: 16px;
     width: auto;
@@ -401,10 +402,16 @@ footer {
   }
 
   #contact-form {
+<<<<<<< HEAD
     justify-content: center;
     display: flex;
     align-items: center;
     width: 100%;
+=======
+    width: 48%;
+    height: 370px;
+    margin: 5px 26% 20px 26%;
+>>>>>>> parent of 3a0992e (up)
   }
 
   #checking-form #checking-form-tablet{
