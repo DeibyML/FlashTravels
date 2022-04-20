@@ -59,4 +59,37 @@ $(document).ready(function () {
       },
     },
   });
+
+  $("#booking-form").validate({
+    rules: {
+        From: "required",
+        to: "required",
+  	  datefrom: "required",
+  	  returndate: "required",
+  	  passengers: {
+    		required: true,
+    		min:1,
+    		max:5
+  		}
+
+
+    },
+    // Specify validation error messages
+    messages: {
+      From: "Please Location From",
+      to: "Please Destination",
+	  datefrom: "Please Enter Start Date",
+	  returndate: "Please Enter Return Date",
+	  passengers: {
+  	  required: "Enter No of Pessagers",
+  	  min: "Min should be 1",
+  	  max: "No of passengers should be between 1 to 5"
+  	  }
+    },
+
+    submitHandler: function(form) {
+      alert("Form Sent!");
+      form.submit();
+    }
+  });
 });

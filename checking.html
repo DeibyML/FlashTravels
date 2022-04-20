@@ -1,200 +1,284 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Flash Travels Agency - Check in</title>
     <link rel="stylesheet" href="css/master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <script type="text/javascript">
-      var url = window.location.search;//Parameters in the url
-      if (url !='') {
-        alert("Thank you for contacting us. Your request was sent successfully!"); //show a message to the user
-      }
-  </script>
-  <body>
+</head>
+
+<body>
     <div id="container">
-      <a href="sign-in.html">
+        <a href="sign-in.html">
+            <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
+        </a>
+        <a href="covid19.html">
+            <input type="submit" name="covid" value="Covid 19 policies" class="button"
+                style="margin-top: 25px; right: 15px;">
+        </a>
         <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
-      </a>
-      <a href="covid19.html">
-        <input type="submit" name="covid" value="Covid 19 policies" class="button" style="margin-top: 25px; right: 15px;">
-      </a>
-      <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
-      <!--logo-->
-      <header>
-        <a href="checking.html"><img class="logo" src="images/logo.png" alt="Flash Traves logo"></a>
-        <h1>Flash Travels</h1>
-    	</header>
+        <!--logo-->
+        <header>
+            <a href="checking.html"><img class="logo" src="images/logo.png" alt="Flash Traves logo"></a>
+            <h1>Flash Travels</h1>
+        </header>
 
-      <!--Menu-->
-      <nav class="menu">
-    		<ul>
-    			<li><a href="index.html">Home</a></li>
-    			<li><a href="booking.html">Booking</a></li>
-          <li><a href="checking.html">Check-In</a></li>
-    			<li><a href="about-us.html">About</a></li>
-    			<li><a href="contact.html">Contact Us</a></li>
-    		</ul>
-    	</nav>
-      <div class="explore">
-        <h1>Do your Check - in here...</h1>
-      </div>
-      <div class="desktop">
-        <div class="ligth-form" id="checking-form" style="height: 100px;">
-          <form action="checking.html" method="get">
-            <table>
-              <tr style="border:0">
-                <td class="label"><label for="reservation">Reservation Number</label></td>
-                <td><input type="text" name="reservation" required value=""></td>
-                <td class="label"><label for="passenger">Passenger </label></td>
-                <td><input type="text" name="passenger" required value=""></td>
-              </tr>
-              <tr style="border:0">
-                <td colspan="4">
-                    <input type="submit" name="search" value="Search" class="button" id="search">
-                </td>
-              </tr>
-            </table>
-          </form>
+        <!--Menu-->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="checking.html">Check-In</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="explore">
+            <h1>Do your Check - in here...</h1>
         </div>
-        <div class="ligth-form" id="checking-result">
-          <table style="">
-            <tr>
-              <td colspan="3" style="">PASSENGER: JESSICA ALVAREZ</td>
-            </tr>
-            <tr>
-              <td style="">
-                <h2>TORONTO</h2><br>
-                Toronto International Airport <br>
-                06:00 p.m
-              </td>
-              <td style="">
-                Duration: 05h 06m
-              </td>
-              <td style="">
-                <h2>VANCOUVER</h2><br>
-                Vancouver International Airport <br>
-                11:06 p.m
-              </td>
-            </tr>
-            <tr>
-              <td>CHEK-ING STATUS <br>
-                Pending
-              </td>
-              <td>
-                CLASS <br>
-                Bussiness
-              </td>
-              <td>
-                SEAT <br>
-                3F
-              </td>
-            </tr>
-            <tr>
-              <td>
-                BAGGAGE <br>
-                In cabin: 10kg.
-              </td>
-              <td>
-                LUGGAGE <br>
-                2 units. x 23 Kg.
-              </td>
-            </tr>
-          </table>
+        <div class="desktop">
+            <div class="ligth-form" id="checking-form" style="height: 100px;">
+                <form action="checking.html" method="get" id="myform">
+                    <table>
+                        <tr style="border:0">
+                            <td class="label"><label for="reservation">Reservation Number</label></td>
+                            <td><input type="text" name="reservation" id="reservation" required value=""></td>
+                            <h5 id="usercheck" style="color: red;">
+                                Invalid Registration Number
+                            </h5>
+                            <td class="label"><label for="passenger">Passenger </label></td>
+                            <td><input type="text" name="passenger" required value=""></td>
+                        </tr>
+                        <tr style="border:0">
+                            <td colspan="4">
+                                <input type="submit" name="search" value="Search" class="button" id="search">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="ligth-form" id="checking-result">
+                <table>
+                    <tr>
+                        <td colspan="3">PASSENGER: JESSICA ALVAREZ</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>TORONTO</h2><br>
+                            Toronto International Airport <br>
+                            06:00 p.m
+                        </td>
+                        <td>
+                            Duration: 05h 06m
+                        </td>
+                        <td>
+                            <h2>VANCOUVER</h2><br>
+                            Vancouver International Airport <br>
+                            11:06 p.m
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CHEK-ING STATUS <br>
+                            Pending
+                        </td>
+                        <td>
+                            CLASS <br>
+                            Bussiness
+                        </td>
+                        <td>
+                            SEAT <br>
+                            3F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            BAGGAGE <br>
+                            In cabin: 10kg.
+                        </td>
+                        <td>
+                            LUGGAGE <br>
+                            2 units. x 23 Kg.
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-      </div>
-      <div class="tablet">
-        <div class="ligth-form" id="checking-form-tablet">
-          <form action="checking.html" method="get">
-            <table>
-              <tr style="border:0">
-                <td class="label"><label for="reservation">Reservation Number</label></td>
-                <td><input type="text" name="reservation" id="reservation" required value="" placeholder="Please, enter your reservation code" style="border-radius: 5px; margin-inline: 10px;"></td>
-              </tr>
-              <tr style="border:0">
-                <td class="label"><label for="passenger">Passenger </label></td>
-                <td><input type="text" name="passenger" id="passenger" required value="" placeholder="Please, enter your fullname" style="border-radius: 5px; margin-inline: 10px;"></td>
-              </tr>
-              <tr style="border:0">
-                <td colspan="2">
-                  <input type="submit" name="search-tablet" value="Search" class="button">
-                </td>
-              </tr>
-            </table>
-          </form>
+        <div class="tablet">
+            <div class="ligth-form" id="checking-form-tablet">
+                <form action="checking.html" method="get" id="myform1">
+                    <table>
+                        <tr style="border:0">
+                            <td class="label"><label for="reservation">Reservation Number</label></td>
+                            <td><input type="text" name="reservation" id="reservation1" required value=""
+                                    placeholder="Please, enter your reservation code"
+                                    style="border-radius: 5px; margin-inline: 10px;">
+                                <h5 id="usercheck1" style="color: red;">
+                                    Invalid Registration Number
+                                </h5>
+                            </td>
+                        </tr>
+                        <tr style="border:0">
+                            <td class="label"><label for="passenger">Passenger </label></td>
+                            <td><input type="text" name="passenger" id="passenger" required value=""
+                                    placeholder="Please, enter your fullname"
+                                    style="border-radius: 5px; margin-inline: 10px;"></td>
+                        </tr>
+                        <tr style="border:0">
+                            <td colspan="2">
+                                <input type="submit" name="search-tablet" value="Search" class="button" id="search1">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="ligth-form" id="checking-result-tablet">
+                <table>
+                    <tr>
+                        <td colspan="3">PASSENGER: JESSICA ALVAREZ</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>TORONTO</h2><br>
+                            Toronto International Airport <br>
+                            06:00 p.m
+                        </td>
+                        <td>
+                            Duration: 05h 06m
+                        </td>
+                        <td>
+                            <h2>VANCOUVER</h2><br>
+                            Vancouver International Airport <br>
+                            11:06 p.m
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CHEK-ING STATUS <br>
+                            Pending
+                        </td>
+                        <td>
+                            CLASS <br>
+                            Bussiness
+                        </td>
+                        <td>
+                            SEAT <br>
+                            3F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            BAGGAGE <br>
+                            In cabin: 10kg.
+                        </td>
+                        <td>
+                            LUGGAGE <br>
+                            2 units. x 23 Kg.
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="ligth-form" id="checking-result-tablet">
-          <table style="">
-            <tr>
-              <td colspan="3" style="">PASSENGER: JESSICA ALVAREZ</td>
-            </tr>
-            <tr>
-              <td style="">
-                <h2>TORONTO</h2><br>
-                Toronto International Airport <br>
-                06:00 p.m
-              </td>
-              <td style="">
-                Duration: 05h 06m
-              </td>
-              <td style="">
-                <h2>VANCOUVER</h2><br>
-                Vancouver International Airport <br>
-                11:06 p.m
-              </td>
-            </tr>
-            <tr>
-              <td>CHEK-ING STATUS <br>
-                Pending
-              </td>
-              <td>
-                CLASS <br>
-                Bussiness
-              </td>
-              <td>
-                SEAT <br>
-                3F
-              </td>
-            </tr>
-            <tr>
-              <td>
-                BAGGAGE <br>
-                In cabin: 10kg.
-              </td>
-              <td>
-                LUGGAGE <br>
-                2 units. x 23 Kg.
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <script type="text/javascript">
-          var url = window.location.search;//Parameters in the url
-          if (url !=''){
-            my_div = document.getElementById('checking-result');
-            if(my_div!=null){
-              my_div.style.display='inline-block';
+        <script type="text/javascript">
+            var url = window.location.search;//Parameters in the url
+            if (url != '') {
+                my_div = document.getElementById('checking-result');
+                if (my_div != null) {
+                    my_div.style.display = 'inline-block';
+                }
+                else {
+                    my_div = document.getElementById('checking-result-tablet');
+                    if (my_div != null) {
+                        my_div.style.display = 'inline-block';
+                    }
+                }
             }
-            else {
-              my_div = document.getElementById('checking-result-tablet');
-              if(my_div!=null){
-                my_div.style.display='inline-block';
-              }
-            }
-          }
-      </script>
-      <footer>
-        <div class="social_images">
-          <a href="https://www.facebook.com"><img src="images/social/Facebook.png" alt=""></a>
-          <a href="https://www.instagram.com"><img src="images/social/Instagram.png" alt=""></a>
-          <a href="https://www.twitter.com"><img src="images/social/Twitter.png" alt=""></a>
-          <a href="mailto:info@flashtravels.com"><img src="images/social/info.png" alt=""></a>
-        </div>
+        </script>
+        <footer>
+            <div class="social_images">
 
-        <h3>&copy; Copyright 2021. All Rights Reserved.</h3>
-      </footer>
+            </div>
+
+            <h3>&copy; Copyright 2021. All Rights Reserved.</h3>
+        </footer>
     </div>
-  </body>
+    <script>
+
+        // Document is ready
+        $(document).ready(function () {
+
+            $('#usercheck').hide();
+            let regError = true;
+            $('#reservation').keyup(function () {
+                validateRegNum();
+            });
+
+            function validateRegNum() {
+                let regValue = $('#reservation').val();
+                if (regValue.length == '') {
+                    $('#usercheck').show();
+                    regError = false;
+                    return false;
+                }
+                else if ((regValue.length < 4) ||
+                    (regValue == 0000)|| regValue1 != Number) {
+                    $('#usercheck').show();
+                    $('#usercheck').html
+                        ("please enter atleast 4 values");
+                    regError = false;
+                    return false;
+                }
+                else {
+                    $('#usercheck').hide();
+                }
+            }
+            $('#search').click(function () {
+                validateRegNum();
+                if ((regError == true)) {
+                    document.getElementById("myform").submit();
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+
+
+            $('#usercheck1').hide();
+            let regError1 = true;
+            $('#reservation1').keyup(function () {
+                validateRegNum1();
+            });
+
+            function validateRegNum1() {
+                let regValue1 = $('#reservation1').val();
+                if (regValue1.length == '') {
+                    $('#usercheck1').show();
+                    regError1 = false;
+                    return false;
+                }
+                else if ((regValue1.length < 4) ||
+                    (regValue1 == 0000)|| regValue1 != Number) {
+                    $('#usercheck1').show();
+                    $('#usercheck1').html
+                        ("please enter atleast 4 values");
+                    regError1 = false;
+                    return false;
+                }
+                else {
+                    $('#usercheck1').hide();
+                }
+            }
+            $('#search1').click(function () {
+                validateRegNum1();
+                if ((regError1 == true)) {
+                    document.getElementById("myform1").submit();
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+    </script>
+</body>
+
 </html>
