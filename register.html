@@ -80,27 +80,17 @@
               </td>
             </tr>
           </table>
-          <input
-            type="submit"
-            type="url"
-            name="Register"
-            value="Register"
-            class="button"
-            id="register_button"
-          />
-        </form>
-        <input
-          type="button"
-          name="covid"
-          id="covid_button"
-          value="Covid 19 policies"
-          class="button"
-          style="margin-top: 25px; right: 15px"
-        />
-        <p>
-          Are you already registered? Press click to
-          <a href="sign-in.html" class="link-click">Sign in</a>
-        </p>
+          <div class="buttons">
+            <input type="submit" type="url" name="Register" value="Register"
+              class="button" id="register_button"/>
+          </form>
+          <input type="button" name="covid" id="covid_button" value="Covid 19 policies"
+              class="button" style="margin-top: 25px; right: 15px"/>
+          <p>
+            Are you already registered? Press click to
+            <a href="sign-in.html" class="link-click">Sign in</a>
+          </p>
+        </div>
       </div>
 
       <footer>
@@ -119,8 +109,25 @@
           /></a>
         </div>
 
-        <h3>&copy; Copyright 2021. All Rights Reserved.</h3>
+        <h3>&copy; Copyright 2022. All Rights Reserved.</h3>
       </footer>
     </div>
   </body>
+  <style>
+
+    div.dark-form {
+      padding-top: 20px;
+    }
+    label {
+      margin-right: 25px;
+    }
+
+    input {
+      border-radius: 10px;
+    }
+
+    div.buttons {
+      text-align: center;
+    }
+  </style>
 </html>

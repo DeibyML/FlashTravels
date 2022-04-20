@@ -6,19 +6,19 @@
     <title>Flash Travels Agency - Check in</title>
     <link rel="stylesheet" href="css/master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div id="container">
-        <a href="sign-in.html">
-            <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
-        </a>
         <a href="covid19.html">
             <input type="submit" name="covid" value="Covid 19 policies" class="button"
                 style="margin-top: 25px; right: 15px;">
         </a>
-        <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
+        <a href="sign-in.html">
+            <input type="submit" name="sig-in" value="Sign-in" class="button" id="sign-in">
+        </a>
         <!--logo-->
         <header>
             <a href="checking.html"><img class="logo" src="images/logo.png" alt="Flash Traves logo"></a>
@@ -36,10 +36,10 @@
             </ul>
         </nav>
         <div class="explore">
-            <h1>Do your Check - in here...</h1>
+            <h1>Do your Check-In here...</h1>
         </div>
         <div class="desktop">
-            <div class="ligth-form" id="checking-form" style="height: 100px;">
+            <div class="ligth-form" id="checking-form" style="height: 100px; width: 100%;">
                 <form action="checking.html" method="get" id="myform">
                     <table>
                         <tr style="border:0">
@@ -199,7 +199,7 @@
 
             </div>
 
-            <h3>&copy; Copyright 2021. All Rights Reserved.</h3>
+            <h3>&copy; Copyright 2022. All Rights Reserved.</h3>
         </footer>
     </div>
     <script>
@@ -224,7 +224,7 @@
                     (regValue == 0000)|| regValue1 != Number) {
                     $('#usercheck').show();
                     $('#usercheck').html
-                        ("please enter atleast 4 values");
+                        ("Please enter at least 4 values");
                     regError = false;
                     return false;
                 }
@@ -260,7 +260,7 @@
                     (regValue1 == 0000)|| regValue1 != Number) {
                     $('#usercheck1').show();
                     $('#usercheck1').html
-                        ("please enter atleast 4 values");
+                        ("Please enter at least 4 values");
                     regError1 = false;
                     return false;
                 }

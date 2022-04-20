@@ -78,18 +78,23 @@ $(document).ready(function () {
     messages: {
       From: "Please Location From",
       to: "Please Destination",
-	  datefrom: "Please Enter Start Date",
-	  returndate: "Please Enter Return Date",
-	  passengers: {
-  	  required: "Enter No of Pessagers",
-  	  min: "Min should be 1",
-  	  max: "No of passengers should be between 1 to 5"
-  	  }
+      datefrom: "Please Enter Start Date",
+      returndate: "Please Enter Return Date",
+      passengers: {
+        required: "Enter No of Passengers",
+        min: "Min should be 1",
+        max: "No of passengers should be between 1 to 5"
+      }
     },
 
     submitHandler: function(form) {
-      alert("Form Sent!");
-      form.submit();
+      Swal.fire(
+        'Your reservation has been done!',
+        'The details will be sent to your email',
+        'ok'
+      ).then(res => {
+        window.location.href = 'index.html'
+      })
     }
   });
 });
