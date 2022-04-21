@@ -5,6 +5,9 @@
     <title>Flash Travels Agency - Sign in</title>
     <link rel="stylesheet" href="css/master.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div id="container">
@@ -38,8 +41,12 @@
             </tr>
             <tr>
               <td class="label"><label for="password">Password </label></td>
+              <td><input type="password" required value="" /></td>
+            </tr>
+            <tr>
+              <td></td>
               <td>
-                <input type="password" required value="" />
+                <input type="button" name="Login" value="Login" class="button" id="login_button"/>
               </td>
             </tr>
           </table>
@@ -71,4 +78,21 @@
       </footer>
     </div>
   </body>
+  <script>
+
+    $("#login_button").click(() => {
+      login();
+    });
+
+    function login() {
+      Swal.fire(
+        'Welcome Deiby Montoya!',
+        'You will be redirect to the home page',
+        'ok'
+      ).then(res => {
+        window.location.href = 'index.html'
+      })
+
+    }
+  </script>
 </html>
